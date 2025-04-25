@@ -1,0 +1,14 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\users\\callum\\documents\\github\\seprojectdemo\\source\\seprojectdemo\\seprojectdemo.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\users\\callum\\documents\\github\\seprojectdemo\\intermediate\\build\\win64\\x64\\seprojectdemoeditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
+        "Includes": [
+            "c:\\users\\callum\\documents\\github\\seprojectdemo\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\seprojectdemo\\definitions.seprojectdemo.h",
+            "c:\\users\\callum\\documents\\github\\seprojectdemo\\source\\seprojectdemo\\seprojectdemo.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "SEProjectDemo",
+			"Path": "..\\Source\\SEProjectDemo.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "SEProjectDemoEditor",
+			"Path": "..\\Source\\SEProjectDemoEditor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}
