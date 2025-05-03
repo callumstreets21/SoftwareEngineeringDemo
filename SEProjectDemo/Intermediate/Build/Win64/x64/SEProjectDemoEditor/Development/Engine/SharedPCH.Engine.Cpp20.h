@@ -1,3 +1,0 @@
-// PCH for Runtime/Engine/Public/EngineSharedPCH.h
-#include "C:/Users/Callum/Documents/GitHub/SEProjectDemo/Intermediate/Build/Win64/x64/SEProjectDemoEditor/Development/Engine/SharedDefinitions.Engine.Cpp20.h"
-#include "Runtime/Engine/Public/EngineSharedPCH.h"
