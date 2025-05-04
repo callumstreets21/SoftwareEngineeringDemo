@@ -1,0 +1,56 @@
+[gd_scene load_steps=6 format=3 uid="uid://m8gewbw7h77d"]
+
+[ext_resource type="Theme" uid="uid://bymf7smqhnjk6" path="res://Ui_Theme.tres" id="1_mmr0i"]
+[ext_resource type="PackedScene" uid="uid://dt4fuurxd4y3e" path="res://Displays/DisplayTask/DisplayTask.tscn" id="2_58dhh"]
+[ext_resource type="Shader" uid="uid://dyr6u3sn5ymgf" path="res://Displays/DisplayTask/DisplayTask.gdshader" id="2_gil83"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_g0n8s"]
+shader = ExtResource("2_gil83")
+
+[sub_resource type="LabelSettings" id="LabelSettings_mmr0i"]
+font_size = 38
+
+[node name="Node2D" type="Node2D"]
+
+[node name="CanvasLayer_Panel_TabContainer_DisplayTask_VBoxContainer_HBoxContainer#Panel" type="Panel" parent="."]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Panel" type="Panel" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_mmr0i")
+metadata/_edit_use_anchors_ = true
+
+[node name="TabContainer" type="TabContainer" parent="CanvasLayer/Panel"]
+material = SubResource("ShaderMaterial_g0n8s")
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.046
+anchor_right = 1.0
+anchor_bottom = 1.0
+tab_alignment = 2
+current_tab = 0
+
+[node name="DisplayTask" parent="CanvasLayer/Panel/TabContainer" instance=ExtResource("2_58dhh")]
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="VSplitContainer" parent="CanvasLayer/Panel/TabContainer/DisplayTask/HBoxContainer" index="1"]
+split_offset = 257
+
+[node name="Label" type="Label" parent="CanvasLayer/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.229
+anchor_bottom = 0.068
+offset_bottom = -0.440002
+text = "Fatigue monitoring app"
+label_settings = SubResource("LabelSettings_mmr0i")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[editable path="CanvasLayer/Panel/TabContainer/DisplayTask"]
