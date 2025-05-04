@@ -11,8 +11,14 @@ config_version=5
 [application]
 
 config/name="SoftwareEngineeringDemo"
+run/main_scene="uid://bftxrjrj0b8kn"
 config/features=PackedStringArray("4.4", "Mobile")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=1920
+window/size/viewport_height=1080
 
 [rendering]
 
