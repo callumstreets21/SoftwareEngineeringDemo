@@ -1,7 +1,8 @@
 extends Node
 
-@onready var orb = $CanvasLayer/OrbButton
-@onready var label = $CanvasLayer/ReactionTimeLabel
+@onready var panel = $PanelContainer
+@onready var orb = $OrbButton
+@onready var label = $PanelContainer/ReactionTimeLabel
 
 var start_time : float = 0.0
 var current_round : int = 0
@@ -28,13 +29,15 @@ func end_game():
 	
 
 func show_orb():
-	var screen_size = get_viewport().size
+	var panel_size = panel.get_rect().size
+	
 	var orb_size = orb.size
 	orb.position = Vector2(
-		randi() % int(screen_size.x - orb_size.x),
-		randi() % int(screen_size.y - orb_size.y)
+		randi() % int(panel_size.x - orb_size.x),
+		randi() % int(panel_size.y - orb_size.y)
 	)
 	orb.show()
+	print(str(orb.position))
 	start_time = Time.get_ticks_msec() / 1000.0
 	label.text = "Click the orb!"
 	
