@@ -39,9 +39,6 @@ current_tab = 0
 layout_mode = 2
 metadata/_tab_index = 0
 
-[node name="VSplitContainer" parent="CanvasLayer/Panel/TabContainer/DisplayTask/HBoxContainer" index="1"]
-split_offset = 257
-
 [node name="Label" type="Label" parent="CanvasLayer/Panel"]
 layout_mode = 1
 anchors_preset = -1
@@ -52,5 +49,3 @@ text = "Fatigue monitoring app"
 label_settings = SubResource("LabelSettings_mmr0i")
 horizontal_alignment = 1
 vertical_alignment = 1
-
-[editable path="CanvasLayer/Panel/TabContainer/DisplayTask"]

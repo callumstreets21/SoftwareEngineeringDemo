@@ -1,4 +1,4 @@
-extends Node2D
+extends Control
 
 var colors = ["Red", "Green", "Blue", "Yellow"]
 var sequence = []
@@ -9,13 +9,14 @@ var max_rounds = 10
 var total_tries = 10
 var tries_left = total_tries
 
-@onready var label = $PanelContainer/Label
+
+@onready var label = $PanelContainer/VBoxContainer/HBoxContainer/Label
 @onready var panel = $PanelContainer
 @onready var buttons = {
-	"Red": $RedButton,
-	"Green": $GreenButton,
-	"Blue": $BlueButton,
-	"Yellow": $YellowButton,
+	"Red": $PanelContainer/VBoxContainer/RedButton,
+	"Green": $PanelContainer/VBoxContainer/GreenButton,
+	"Blue": $PanelContainer/VBoxContainer/HBoxContainer/BlueButton,
+	"Yellow": $PanelContainer/VBoxContainer/HBoxContainer/YellowButton,
 }
 
 var highlight_colors = {
@@ -26,10 +27,10 @@ var highlight_colors = {
 }
 
 var normal_colors = {
-	"Red": Color(0.8, 0.0, 0.0),
-	"Green": Color(0.0, 0.8, 0.0),
-	"Blue": Color(0.0, 0.0, 0.8),
-	"Yellow": Color(0.8, 0.8, 0.0)
+	"Red": Color(0.8, 0.0, 1.0),
+	"Green": Color(1.0, 0.8, 0.0),
+	"Blue": Color(0.0, 1.0, 0.8),
+	"Yellow": Color(1.8, 0.8, 1.0)
 }
 
 
@@ -37,7 +38,7 @@ func _ready():
 	start_game()
 	for color in colors:
 		buttons[color].pressed.connect(func(): _on_button_pressed(color))
-	adjust_button_positions()
+	#adjust_button_positions()
 
 func adjust_button_positions():
 	var panel_size = panel.get_rect().size
@@ -71,6 +72,7 @@ func start_game():
 	round_count = 0 
 	tries_left = 10
 	preset_button_colors()
+	print(str(panel.size.x))
 	
 func end_game():
 	print(str(tries_left/total_tries))
