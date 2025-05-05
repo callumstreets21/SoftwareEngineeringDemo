@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://bu3latxe6g46t"]
+[gd_scene load_steps=7 format=3 uid="uid://bu3latxe6g46t"]
 
 [ext_resource type="Shader" uid="uid://dyr6u3sn5ymgf" path="res://Displays/DisplayTask/DisplayTask.gdshader" id="1_md2yi"]
 [ext_resource type="Texture2D" uid="uid://dmvke8k5ce6yc" path="res://Task/white-rect.png" id="2_y1xem"]
@@ -8,6 +8,9 @@
 shader = ExtResource("1_md2yi")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_wuvtp"]
+shader = ExtResource("1_md2yi")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_174a5"]
 shader = ExtResource("1_md2yi")
 
 [node name="DisplayTask" type="Control"]
@@ -38,6 +41,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="TextureRect" type="TextureRect" parent="HBoxContainer"]
+material = SubResource("ShaderMaterial_174a5")
 layout_mode = 2
 size_flags_horizontal = 3
 texture = ExtResource("3_q23o1")

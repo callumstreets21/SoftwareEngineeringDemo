@@ -77,3 +77,5 @@ text = "
 layout_mode = 2
 size_flags_stretch_ratio = 0.35
 text = "Login"
+
+[connection signal="pressed" from="CanvasLayer/Panel/VBoxContainer/Button" to="." method="_on_button_pressed"]

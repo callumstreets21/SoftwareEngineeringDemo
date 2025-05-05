@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://diqiaahs2s3ay"]
+[gd_scene load_steps=7 format=3 uid="uid://diqiaahs2s3ay"]
 
 [ext_resource type="Shader" uid="uid://dyr6u3sn5ymgf" path="res://Displays/DisplayTask/DisplayTask.gdshader" id="1_nle8u"]
 [ext_resource type="Texture2D" uid="uid://dmvke8k5ce6yc" path="res://Task/white-rect.png" id="2_0gxa7"]
@@ -8,6 +8,9 @@
 shader = ExtResource("1_nle8u")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_wuvtp"]
+shader = ExtResource("1_nle8u")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_0x8hn"]
 shader = ExtResource("1_nle8u")
 
 [node name="DisplayTask" type="Control"]
@@ -38,7 +41,40 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="TextureRect" type="TextureRect" parent="HBoxContainer"]
+material = SubResource("ShaderMaterial_0x8hn")
 layout_mode = 2
 size_flags_horizontal = 3
 texture = ExtResource("3_mmxrs")
 expand_mode = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/TextureRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.3
+anchor_right = 0.7
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="HBoxContainer/TextureRect/VBoxContainer"]
+layout_mode = 2
+text = "App Settings
+"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="HBoxContainer/TextureRect/VBoxContainer"]
+layout_mode = 2
+text = "Clear DB"
+
+[node name="Label2" type="Label" parent="HBoxContainer/TextureRect/VBoxContainer"]
+layout_mode = 2
+text = "Volume"
+horizontal_alignment = 1
+
+[node name="HSlider" type="HSlider" parent="HBoxContainer/TextureRect/VBoxContainer"]
+layout_mode = 2
+
+[node name="CheckButton" type="CheckButton" parent="HBoxContainer/TextureRect/VBoxContainer"]
+layout_mode = 2
+text = "Dark Mode"
