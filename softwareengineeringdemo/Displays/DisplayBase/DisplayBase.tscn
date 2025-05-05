@@ -1,8 +1,13 @@
-[gd_scene load_steps=6 format=3 uid="uid://m8gewbw7h77d"]
+[gd_scene load_steps=11 format=3 uid="uid://m8gewbw7h77d"]
 
 [ext_resource type="Theme" uid="uid://bymf7smqhnjk6" path="res://Ui_Theme.tres" id="1_mmr0i"]
 [ext_resource type="PackedScene" uid="uid://dt4fuurxd4y3e" path="res://Displays/DisplayTask/DisplayTask.tscn" id="2_58dhh"]
 [ext_resource type="Shader" uid="uid://dyr6u3sn5ymgf" path="res://Displays/DisplayTask/DisplayTask.gdshader" id="2_gil83"]
+[ext_resource type="PackedScene" uid="uid://cfkiuiupw6pus" path="res://Displays/DisplayDashboard/DisplayDashboard.tscn" id="3_815r1"]
+[ext_resource type="PackedScene" uid="uid://w02mv2oawevh" path="res://Displays/DisplayStats/DisplayStats.tscn" id="4_660ng"]
+[ext_resource type="PackedScene" uid="uid://diqiaahs2s3ay" path="res://Displays/DisplaySettings/DisplaySettings.tscn" id="6_n216t"]
+[ext_resource type="PackedScene" uid="uid://bu3latxe6g46t" path="res://Displays/DisplayAccount/DisplayAccount.tscn" id="7_y7nes"]
+[ext_resource type="PackedScene" uid="uid://d3y6m12rday" path="res://Displays/ExitTab/ExitTab.tscn" id="8_7570c"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_g0n8s"]
 shader = ExtResource("2_gil83")
@@ -35,9 +40,34 @@ anchor_bottom = 1.0
 tab_alignment = 2
 current_tab = 0
 
-[node name="DisplayTask" parent="CanvasLayer/Panel/TabContainer" instance=ExtResource("2_58dhh")]
+[node name="Dashboard" parent="CanvasLayer/Panel/TabContainer" instance=ExtResource("3_815r1")]
 layout_mode = 2
 metadata/_tab_index = 0
+
+[node name="Stats" parent="CanvasLayer/Panel/TabContainer" instance=ExtResource("4_660ng")]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 1
+
+[node name="Tasks" parent="CanvasLayer/Panel/TabContainer" instance=ExtResource("2_58dhh")]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 2
+
+[node name="Settings" parent="CanvasLayer/Panel/TabContainer" instance=ExtResource("6_n216t")]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 3
+
+[node name="Account" parent="CanvasLayer/Panel/TabContainer" instance=ExtResource("7_y7nes")]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 4
+
+[node name="Exit" parent="CanvasLayer/Panel/TabContainer" instance=ExtResource("8_7570c")]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 5
 
 [node name="Label" type="Label" parent="CanvasLayer/Panel"]
 layout_mode = 1
