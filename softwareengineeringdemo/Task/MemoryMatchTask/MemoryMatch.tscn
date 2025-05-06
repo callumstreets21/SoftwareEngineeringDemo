@@ -1,0 +1,535 @@
+[gd_scene load_steps=22 format=3 uid="uid://biommkle86s83"]
+
+[ext_resource type="Texture2D" uid="uid://fykisvhe03kw" path="res://Task/MemoryMatchTask/Sprites/card_clubs_A.png" id="1_7q17u"]
+[ext_resource type="Script" uid="uid://b3brkug1yjsht" path="res://Task/MemoryMatchTask/memory_match.gd" id="1_iavml"]
+[ext_resource type="Texture2D" uid="uid://x8220mswhgli" path="res://Task/MemoryMatchTask/Sprites/card_back.png" id="2_3qxmf"]
+[ext_resource type="Texture2D" uid="uid://bugrcq428wthn" path="res://Task/MemoryMatchTask/Sprites/card_empty.png" id="3_t5n6r"]
+[ext_resource type="Texture2D" uid="uid://d3ttae2domlyp" path="res://Task/MemoryMatchTask/Sprites/card_diamonds_A.png" id="4_3yx8e"]
+[ext_resource type="Texture2D" uid="uid://crftkauromg2d" path="res://Task/MemoryMatchTask/Sprites/card_hearts_A.png" id="5_iavml"]
+[ext_resource type="Texture2D" uid="uid://3iwdhrnojv4g" path="res://Task/MemoryMatchTask/Sprites/card_spades_A.png" id="6_pmoc0"]
+[ext_resource type="Texture2D" uid="uid://be1whkjgcx200" path="res://Task/MemoryMatchTask/Sprites/card_clubs_K.png" id="7_h1sop"]
+[ext_resource type="Texture2D" uid="uid://itiqijhfjt0r" path="res://Task/MemoryMatchTask/Sprites/card_diamonds_K.png" id="8_qtvjh"]
+[ext_resource type="Texture2D" uid="uid://dcor36lbfbidv" path="res://Task/MemoryMatchTask/Sprites/card_hearts_K.png" id="9_fe0cq"]
+[ext_resource type="Texture2D" uid="uid://cqbvrmybe5suu" path="res://Task/MemoryMatchTask/Sprites/card_spades_K.png" id="10_dgmv0"]
+[ext_resource type="Texture2D" uid="uid://b5cgebqa7lqpt" path="res://Task/MemoryMatchTask/Sprites/card_clubs_Q.png" id="11_dktya"]
+[ext_resource type="Texture2D" uid="uid://bt6s7nwynohea" path="res://Task/MemoryMatchTask/Sprites/card_diamonds_Q.png" id="12_pjgmu"]
+[ext_resource type="Texture2D" uid="uid://loy2qlq21l5d" path="res://Task/MemoryMatchTask/Sprites/card_hearts_Q.png" id="13_yx4px"]
+[ext_resource type="Texture2D" uid="uid://d6if0hqpy22j" path="res://Task/MemoryMatchTask/Sprites/card_spades_Q.png" id="14_2rkbo"]
+[ext_resource type="Texture2D" uid="uid://d0s1q0pix3dii" path="res://Task/MemoryMatchTask/Sprites/card_clubs_J.png" id="15_ddc3w"]
+[ext_resource type="Texture2D" uid="uid://dsuugjh687rw5" path="res://Task/MemoryMatchTask/Sprites/card_diamonds_J.png" id="16_ptgh0"]
+[ext_resource type="Texture2D" uid="uid://c4q4jcmgpj8d4" path="res://Task/MemoryMatchTask/Sprites/card_hearts_J.png" id="17_dibmd"]
+[ext_resource type="Texture2D" uid="uid://boxydu4m4fy5i" path="res://Task/MemoryMatchTask/Sprites/card_spades_J.png" id="18_pbpyh"]
+[ext_resource type="Texture2D" uid="uid://df133e5ut7wpi" path="res://Task/MemoryMatchTask/Sprites/card_joker_red.png" id="19_4jwh0"]
+[ext_resource type="Texture2D" uid="uid://dbqygp4exj4lm" path="res://Task/MemoryMatchTask/Sprites/card_joker_black.png" id="20_osw2e"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_iavml")
+
+[node name="Buttons" type="Node" parent="."]
+
+[node name="AceOfClubsButton" type="TextureButton" parent="Buttons"]
+z_index = 1
+offset_left = 612.0
+offset_top = 280.0
+offset_right = 676.0
+offset_bottom = 344.0
+texture_normal = ExtResource("2_3qxmf")
+texture_pressed = ExtResource("3_t5n6r")
+
+[node name="AceOfDiamondsButton" type="TextureButton" parent="Buttons"]
+z_index = 1
+offset_left = 712.0
+offset_top = 280.0
+offset_right = 776.0
+offset_bottom = 344.0
+texture_normal = ExtResource("2_3qxmf")
+texture_pressed = ExtResource("3_t5n6r")
+
+[node name="AceOfHeartsButton" type="TextureButton" parent="Buttons"]
+z_index = 1
+offset_left = 612.0
+offset_top = 780.0
+offset_right = 676.0
+offset_bottom = 844.0
+texture_normal = ExtResource("2_3qxmf")
+texture_pressed = ExtResource("3_t5n6r")
+
+[node name="AceOfSpadesButton" type="TextureButton" parent="Buttons"]
+z_index = 1
+offset_left = 812.0
+offset_top = 780.0
+offset_right = 876.0
+offset_bottom = 844.0
+texture_normal = ExtResource("2_3qxmf")
+texture_pressed = ExtResource("3_t5n6r")
+
+[node name="KingOfClubsButton" type="TextureButton" parent="Buttons"]
+z_index = 1
+offset_left = 1012.0
+offset_top = 581.0
+offset_right = 1076.0
+offset_bottom = 645.0
+texture_normal = ExtResource("2_3qxmf")
+texture_pressed = ExtResource("3_t5n6r")
+
+[node name="KingOfDiamondsButton" type="TextureButton" parent="Buttons"]
+z_index = 1
+offset_left = 612.0
+offset_top = 380.0
+offset_right = 676.0
+offset_bottom = 444.0
+texture_normal = ExtResource("2_3qxmf")
+texture_pressed = ExtResource("3_t5n6r")
+
+[node name="KingOfHeartsButton" type="TextureButton" parent="Buttons"]
+z_index = 1
+offset_left = 912.0
+offset_top = 680.0
+offset_right = 976.0
+offset_bottom = 744.0
+texture_normal = ExtResource("2_3qxmf")
+texture_pressed = ExtResource("3_t5n6r")
+
+[node name="KingOfSpadesButton" type="TextureButton" parent="Buttons"]
+z_index = 1
+offset_left = 1012.0
+offset_top = 280.0
+offset_right = 1076.0
+offset_bottom = 344.0
+texture_normal = ExtResource("2_3qxmf")
+texture_pressed = ExtResource("3_t5n6r")
+
+[node name="QueenOfClubsButton" type="TextureButton" parent="Buttons"]
+z_index = 1
+offset_left = 1112.0
+offset_top = 580.0
+offset_right = 1176.0
+offset_bottom = 644.0
+texture_normal = ExtResource("2_3qxmf")
+texture_pressed = ExtResource("3_t5n6r")
+
+[node name="QueenOfDiamondsButton" type="TextureButton" parent="Buttons"]
+z_index = 1
+offset_left = 912.0
+offset_top = 280.0
+offset_right = 976.0
+offset_bottom = 344.0
+texture_normal = ExtResource("2_3qxmf")
+texture_pressed = ExtResource("3_t5n6r")
+
+[node name="QueenOfHeartsButton" type="TextureButton" parent="Buttons"]
+z_index = 1
+offset_left = 712.0
+offset_top = 580.0
+offset_right = 776.0
+offset_bottom = 644.0
+texture_normal = ExtResource("2_3qxmf")
+texture_pressed = ExtResource("3_t5n6r")
+
+[node name="QueenOfSpadesButton" type="TextureButton" parent="Buttons"]
+z_index = 1
+offset_left = 812.0
+offset_top = 680.0
+offset_right = 876.0
+offset_bottom = 744.0
+texture_normal = ExtResource("2_3qxmf")
+texture_pressed = ExtResource("3_t5n6r")
+
+[node name="JackOfClubsButton" type="TextureButton" parent="Buttons"]
+z_index = 1
+offset_left = 1012.0
+offset_top = 480.0
+offset_right = 1076.0
+offset_bottom = 544.0
+texture_normal = ExtResource("2_3qxmf")
+texture_pressed = ExtResource("3_t5n6r")
+
+[node name="JackOfDiamondsButton" type="TextureButton" parent="Buttons"]
+z_index = 1
+offset_left = 1012.0
+offset_top = 380.0
+offset_right = 1076.0
+offset_bottom = 444.0
+texture_normal = ExtResource("2_3qxmf")
+texture_pressed = ExtResource("3_t5n6r")
+
+[node name="JackOfHeartsButton" type="TextureButton" parent="Buttons"]
+z_index = 1
+offset_left = 1112.0
+offset_top = 280.0
+offset_right = 1176.0
+offset_bottom = 344.0
+texture_normal = ExtResource("2_3qxmf")
+texture_pressed = ExtResource("3_t5n6r")
+
+[node name="JackOfSpadesButton" type="TextureButton" parent="Buttons"]
+z_index = 1
+offset_left = 812.0
+offset_top = 280.0
+offset_right = 876.0
+offset_bottom = 344.0
+texture_normal = ExtResource("2_3qxmf")
+texture_pressed = ExtResource("3_t5n6r")
+
+[node name="JokerRedButton" type="TextureButton" parent="Buttons"]
+z_index = 1
+offset_left = 711.0
+offset_top = 480.0
+offset_right = 775.0
+offset_bottom = 544.0
+texture_normal = ExtResource("2_3qxmf")
+texture_pressed = ExtResource("3_t5n6r")
+
+[node name="JokerBlackButton" type="TextureButton" parent="Buttons"]
+z_index = 1
+offset_left = 612.0
+offset_top = 480.0
+offset_right = 676.0
+offset_bottom = 544.0
+texture_normal = ExtResource("2_3qxmf")
+texture_pressed = ExtResource("3_t5n6r")
+
+[node name="AceOfClubsButton2" type="TextureButton" parent="Buttons"]
+z_index = 1
+offset_left = 712.0
+offset_top = 380.0
+offset_right = 776.0
+offset_bottom = 444.0
+texture_normal = ExtResource("2_3qxmf")
+texture_pressed = ExtResource("3_t5n6r")
+
+[node name="AceOfDiamondsButton2" type="TextureButton" parent="Buttons"]
+z_index = 1
+offset_left = 812.0
+offset_top = 480.0
+offset_right = 876.0
+offset_bottom = 544.0
+texture_normal = ExtResource("2_3qxmf")
+texture_pressed = ExtResource("3_t5n6r")
+
+[node name="AceOfHeartsButton2" type="TextureButton" parent="Buttons"]
+z_index = 1
+offset_left = 1012.0
+offset_top = 680.0
+offset_right = 1076.0
+offset_bottom = 744.0
+texture_normal = ExtResource("2_3qxmf")
+texture_pressed = ExtResource("3_t5n6r")
+
+[node name="AceOfSpadesButton2" type="TextureButton" parent="Buttons"]
+z_index = 1
+offset_left = 912.0
+offset_top = 780.0
+offset_right = 976.0
+offset_bottom = 844.0
+texture_normal = ExtResource("2_3qxmf")
+texture_pressed = ExtResource("3_t5n6r")
+
+[node name="KingOfClubsButton2" type="TextureButton" parent="Buttons"]
+z_index = 1
+offset_left = 1112.0
+offset_top = 680.0
+offset_right = 1176.0
+offset_bottom = 744.0
+texture_normal = ExtResource("2_3qxmf")
+texture_pressed = ExtResource("3_t5n6r")
+
+[node name="KingOfDiamondsButton2" type="TextureButton" parent="Buttons"]
+z_index = 1
+offset_left = 812.0
+offset_top = 580.0
+offset_right = 876.0
+offset_bottom = 644.0
+texture_normal = ExtResource("2_3qxmf")
+texture_pressed = ExtResource("3_t5n6r")
+
+[node name="KingOfHeartsButton2" type="TextureButton" parent="Buttons"]
+z_index = 1
+offset_left = 612.0
+offset_top = 580.0
+offset_right = 676.0
+offset_bottom = 644.0
+texture_normal = ExtResource("2_3qxmf")
+texture_pressed = ExtResource("3_t5n6r")
+
+[node name="KingOfSpadesButton2" type="TextureButton" parent="Buttons"]
+z_index = 1
+offset_left = 912.0
+offset_top = 480.0
+offset_right = 976.0
+offset_bottom = 544.0
+texture_normal = ExtResource("2_3qxmf")
+texture_pressed = ExtResource("3_t5n6r")
+
+[node name="QueenOfClubsButton2" type="TextureButton" parent="Buttons"]
+z_index = 1
+offset_left = 1012.0
+offset_top = 780.0
+offset_right = 1076.0
+offset_bottom = 844.0
+texture_normal = ExtResource("2_3qxmf")
+texture_pressed = ExtResource("3_t5n6r")
+
+[node name="QueenOfDiamondsButton2" type="TextureButton" parent="Buttons"]
+z_index = 1
+offset_left = 612.0
+offset_top = 681.0
+offset_right = 676.0
+offset_bottom = 745.0
+texture_normal = ExtResource("2_3qxmf")
+texture_pressed = ExtResource("3_t5n6r")
+
+[node name="QueenOfHeartsButton2" type="TextureButton" parent="Buttons"]
+z_index = 1
+offset_left = 712.0
+offset_top = 680.0
+offset_right = 776.0
+offset_bottom = 744.0
+texture_normal = ExtResource("2_3qxmf")
+texture_pressed = ExtResource("3_t5n6r")
+
+[node name="QueenOfSpadesButton2" type="TextureButton" parent="Buttons"]
+z_index = 1
+offset_left = 712.0
+offset_top = 780.0
+offset_right = 776.0
+offset_bottom = 844.0
+texture_normal = ExtResource("2_3qxmf")
+texture_pressed = ExtResource("3_t5n6r")
+
+[node name="JackOfClubsButton2" type="TextureButton" parent="Buttons"]
+z_index = 1
+offset_left = 812.0
+offset_top = 380.0
+offset_right = 876.0
+offset_bottom = 444.0
+texture_normal = ExtResource("2_3qxmf")
+texture_pressed = ExtResource("3_t5n6r")
+
+[node name="JackOfDiamondsButton2" type="TextureButton" parent="Buttons"]
+z_index = 1
+offset_left = 912.0
+offset_top = 580.0
+offset_right = 976.0
+offset_bottom = 644.0
+texture_normal = ExtResource("2_3qxmf")
+texture_pressed = ExtResource("3_t5n6r")
+
+[node name="JackOfHeartsButton2" type="TextureButton" parent="Buttons"]
+z_index = 1
+offset_left = 1112.0
+offset_top = 480.0
+offset_right = 1176.0
+offset_bottom = 544.0
+texture_normal = ExtResource("2_3qxmf")
+texture_pressed = ExtResource("3_t5n6r")
+
+[node name="JackOfSpadesButton2" type="TextureButton" parent="Buttons"]
+z_index = 1
+offset_left = 1112.0
+offset_top = 780.0
+offset_right = 1176.0
+offset_bottom = 844.0
+texture_normal = ExtResource("2_3qxmf")
+texture_pressed = ExtResource("3_t5n6r")
+
+[node name="JokerRedButton2" type="TextureButton" parent="Buttons"]
+z_index = 1
+offset_left = 912.0
+offset_top = 380.0
+offset_right = 976.0
+offset_bottom = 444.0
+texture_normal = ExtResource("2_3qxmf")
+texture_pressed = ExtResource("3_t5n6r")
+
+[node name="JokerBlackButton2" type="TextureButton" parent="Buttons"]
+z_index = 1
+offset_left = 1111.0
+offset_top = 381.0
+offset_right = 1175.0
+offset_bottom = 445.0
+texture_normal = ExtResource("2_3qxmf")
+texture_pressed = ExtResource("3_t5n6r")
+
+[node name="Sprites" type="Node" parent="."]
+
+[node name="AceOfClubs" type="Sprite2D" parent="Sprites"]
+position = Vector2(645, 312)
+texture = ExtResource("1_7q17u")
+
+[node name="AceOfDiamonds" type="Sprite2D" parent="Sprites"]
+position = Vector2(744, 312)
+texture = ExtResource("4_3yx8e")
+
+[node name="AceOfHearts" type="Sprite2D" parent="Sprites"]
+position = Vector2(644, 812)
+texture = ExtResource("5_iavml")
+
+[node name="AceOfSpades" type="Sprite2D" parent="Sprites"]
+position = Vector2(844, 813)
+texture = ExtResource("6_pmoc0")
+
+[node name="KingOfClubs" type="Sprite2D" parent="Sprites"]
+position = Vector2(1044, 613)
+texture = ExtResource("7_h1sop")
+
+[node name="KingOfDiamonds" type="Sprite2D" parent="Sprites"]
+position = Vector2(643, 412)
+texture = ExtResource("8_qtvjh")
+
+[node name="KingOfHearts" type="Sprite2D" parent="Sprites"]
+position = Vector2(944, 711)
+texture = ExtResource("9_fe0cq")
+
+[node name="KingOfSpades" type="Sprite2D" parent="Sprites"]
+position = Vector2(1044, 312)
+texture = ExtResource("10_dgmv0")
+
+[node name="QueenOfClubs" type="Sprite2D" parent="Sprites"]
+position = Vector2(1144, 612)
+texture = ExtResource("11_dktya")
+
+[node name="QueenOfDiamonds" type="Sprite2D" parent="Sprites"]
+position = Vector2(944, 312)
+texture = ExtResource("12_pjgmu")
+
+[node name="QueenOfHearts" type="Sprite2D" parent="Sprites"]
+position = Vector2(744, 612)
+texture = ExtResource("13_yx4px")
+
+[node name="QueenOfSpades" type="Sprite2D" parent="Sprites"]
+position = Vector2(844, 712)
+texture = ExtResource("14_2rkbo")
+
+[node name="JackOfClubs" type="Sprite2D" parent="Sprites"]
+position = Vector2(1044, 512)
+texture = ExtResource("15_ddc3w")
+
+[node name="JackOfDiamonds" type="Sprite2D" parent="Sprites"]
+position = Vector2(1044, 411)
+texture = ExtResource("16_ptgh0")
+
+[node name="JackOfHearts" type="Sprite2D" parent="Sprites"]
+position = Vector2(1144, 312)
+texture = ExtResource("17_dibmd")
+
+[node name="JackOfSpades" type="Sprite2D" parent="Sprites"]
+position = Vector2(844, 312)
+texture = ExtResource("18_pbpyh")
+
+[node name="JokerRed" type="Sprite2D" parent="Sprites"]
+position = Vector2(743, 512)
+texture = ExtResource("19_4jwh0")
+
+[node name="JokerBlack" type="Sprite2D" parent="Sprites"]
+position = Vector2(644, 512)
+texture = ExtResource("20_osw2e")
+
+[node name="AceOfClubs2" type="Sprite2D" parent="Sprites"]
+position = Vector2(743, 412)
+texture = ExtResource("1_7q17u")
+
+[node name="AceOfDiamonds2" type="Sprite2D" parent="Sprites"]
+position = Vector2(844, 512)
+texture = ExtResource("4_3yx8e")
+
+[node name="AceOfHearts2" type="Sprite2D" parent="Sprites"]
+position = Vector2(1044, 712)
+texture = ExtResource("5_iavml")
+
+[node name="AceOfSpades2" type="Sprite2D" parent="Sprites"]
+position = Vector2(944, 812)
+texture = ExtResource("6_pmoc0")
+
+[node name="KingOfClubs2" type="Sprite2D" parent="Sprites"]
+position = Vector2(1144, 711)
+texture = ExtResource("7_h1sop")
+
+[node name="KingOfDiamonds2" type="Sprite2D" parent="Sprites"]
+position = Vector2(844, 612)
+texture = ExtResource("8_qtvjh")
+
+[node name="KingOfHearts2" type="Sprite2D" parent="Sprites"]
+position = Vector2(644, 612)
+texture = ExtResource("9_fe0cq")
+
+[node name="KingOfSpades2" type="Sprite2D" parent="Sprites"]
+position = Vector2(944, 512)
+texture = ExtResource("10_dgmv0")
+
+[node name="QueenOfClubs2" type="Sprite2D" parent="Sprites"]
+position = Vector2(1044, 812)
+texture = ExtResource("11_dktya")
+
+[node name="QueenOfDiamonds2" type="Sprite2D" parent="Sprites"]
+position = Vector2(644, 713)
+texture = ExtResource("12_pjgmu")
+
+[node name="QueenOfHearts2" type="Sprite2D" parent="Sprites"]
+position = Vector2(744, 711)
+texture = ExtResource("13_yx4px")
+
+[node name="QueenOfSpades2" type="Sprite2D" parent="Sprites"]
+position = Vector2(744, 812)
+texture = ExtResource("14_2rkbo")
+
+[node name="JackOfClubs2" type="Sprite2D" parent="Sprites"]
+position = Vector2(844, 412)
+texture = ExtResource("15_ddc3w")
+
+[node name="JackOfDiamonds2" type="Sprite2D" parent="Sprites"]
+position = Vector2(944, 613)
+texture = ExtResource("16_ptgh0")
+
+[node name="JackOfHearts2" type="Sprite2D" parent="Sprites"]
+position = Vector2(1144, 512)
+texture = ExtResource("17_dibmd")
+
+[node name="JackOfSpades2" type="Sprite2D" parent="Sprites"]
+position = Vector2(1144, 812)
+texture = ExtResource("18_pbpyh")
+
+[node name="JokerRed2" type="Sprite2D" parent="Sprites"]
+position = Vector2(944, 412)
+texture = ExtResource("19_4jwh0")
+
+[node name="JokerBlack2" type="Sprite2D" parent="Sprites"]
+position = Vector2(1144, 413)
+texture = ExtResource("20_osw2e")
+
+[connection signal="pressed" from="Buttons/AceOfClubsButton" to="." method="AceOfClubsPressed"]
+[connection signal="pressed" from="Buttons/AceOfDiamondsButton" to="." method="AceOfDiamondsPressed"]
+[connection signal="pressed" from="Buttons/AceOfHeartsButton" to="." method="AceOfHeartsPressed"]
+[connection signal="pressed" from="Buttons/AceOfSpadesButton" to="." method="AceOfSpadesPressed"]
+[connection signal="pressed" from="Buttons/KingOfClubsButton" to="." method="KingOfClubsPressed"]
+[connection signal="pressed" from="Buttons/KingOfDiamondsButton" to="." method="KingOfDiamondsPressed"]
+[connection signal="pressed" from="Buttons/KingOfHeartsButton" to="." method="KingOfHeartsPressed"]
+[connection signal="pressed" from="Buttons/KingOfSpadesButton" to="." method="KingOfSpadesPressed"]
+[connection signal="pressed" from="Buttons/QueenOfClubsButton" to="." method="QueenOfClubsPressed"]
+[connection signal="pressed" from="Buttons/QueenOfDiamondsButton" to="." method="QueenOfDiamondsPressed"]
+[connection signal="pressed" from="Buttons/QueenOfHeartsButton" to="." method="QueenOfHeartsPressed"]
+[connection signal="pressed" from="Buttons/QueenOfSpadesButton" to="." method="QueenOfSpadesPressed"]
+[connection signal="pressed" from="Buttons/JackOfClubsButton" to="." method="JackOfClubsPressed"]
+[connection signal="pressed" from="Buttons/JackOfDiamondsButton" to="." method="JackOfDiamondsPressed"]
+[connection signal="pressed" from="Buttons/JackOfHeartsButton" to="." method="JackOfHeartsPressed"]
+[connection signal="pressed" from="Buttons/JackOfSpadesButton" to="." method="JackOfSpadesPressed"]
+[connection signal="pressed" from="Buttons/JokerRedButton" to="." method="JokerRedPressed"]
+[connection signal="pressed" from="Buttons/JokerBlackButton" to="." method="JokerBlackPressed"]
+[connection signal="pressed" from="Buttons/AceOfClubsButton2" to="." method="AceOfClubsAltPressed"]
+[connection signal="pressed" from="Buttons/AceOfDiamondsButton2" to="." method="AceOfDiamondsAltPressed"]
+[connection signal="pressed" from="Buttons/AceOfHeartsButton2" to="." method="AceOfHeartsAltPressed"]
+[connection signal="pressed" from="Buttons/AceOfSpadesButton2" to="." method="AceOfSpadesAltPressed"]
+[connection signal="pressed" from="Buttons/KingOfClubsButton2" to="." method="KingOfClubsAltPressed"]
+[connection signal="pressed" from="Buttons/KingOfDiamondsButton2" to="." method="KingOfDiamondsAltPressed"]
+[connection signal="pressed" from="Buttons/KingOfHeartsButton2" to="." method="KingOfHeartsAltPressed"]
+[connection signal="pressed" from="Buttons/KingOfSpadesButton2" to="." method="KingOfSpadesAltPressed"]
+[connection signal="pressed" from="Buttons/QueenOfClubsButton2" to="." method="QueenOfClubsAltPressed"]
+[connection signal="pressed" from="Buttons/QueenOfDiamondsButton2" to="." method="QueenOfDiamondsAltPressed"]
+[connection signal="pressed" from="Buttons/QueenOfHeartsButton2" to="." method="QueenOfHeartsAltPressed"]
+[connection signal="pressed" from="Buttons/QueenOfSpadesButton2" to="." method="QueenOfSpadesAltPressed"]
+[connection signal="pressed" from="Buttons/JackOfClubsButton2" to="." method="JackOfClubsAltPressed"]
+[connection signal="pressed" from="Buttons/JackOfDiamondsButton2" to="." method="JackOfDiamondsAltPressed"]
+[connection signal="pressed" from="Buttons/JackOfHeartsButton2" to="." method="JackOfHeartsAltPressed"]
+[connection signal="pressed" from="Buttons/JackOfSpadesButton2" to="." method="JackOfSpadesAltPressed"]
+[connection signal="pressed" from="Buttons/JokerRedButton2" to="." method="JokerRedAltPressed"]
+[connection signal="pressed" from="Buttons/JokerBlackButton2" to="." method="JokerBlackAltPressed"]
