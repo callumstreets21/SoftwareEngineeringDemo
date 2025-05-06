@@ -31,24 +31,6 @@ size_flags_horizontal = 4
 size_flags_vertical = 6
 alignment = 1
 
-[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 5
-size_flags_vertical = 5
-text = "Reaction: "
-label_settings = SubResource("LabelSettings_vj8sw")
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="ReactionScore" type="Label" parent="VBoxContainer/HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 5
-size_flags_vertical = 5
-text = "NaN"
-label_settings = SubResource("LabelSettings_vj8sw")
-horizontal_alignment = 1
-vertical_alignment = 1
-
 [node name="Label2" type="Label" parent="VBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 5
@@ -59,6 +41,24 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="MemoryScore" type="Label" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 5
+size_flags_vertical = 5
+text = "NaN"
+label_settings = SubResource("LabelSettings_vj8sw")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 5
+size_flags_vertical = 5
+text = "Reaction: "
+label_settings = SubResource("LabelSettings_vj8sw")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ReactionScore" type="Label" parent="VBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 5
 size_flags_vertical = 5

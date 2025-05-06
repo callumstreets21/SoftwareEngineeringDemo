@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://cfkiuiupw6pus"]
+[gd_scene load_steps=10 format=3 uid="uid://cfkiuiupw6pus"]
 
 [ext_resource type="Shader" uid="uid://dyr6u3sn5ymgf" path="res://Displays/DisplayTask/DisplayTask.gdshader" id="1_4ggxa"]
+[ext_resource type="Script" uid="uid://dd61cgs4v6xy5" path="res://Displays/DisplayDashboard/display_dashboard.gd" id="1_gi054"]
 [ext_resource type="Texture2D" uid="uid://dmvke8k5ce6yc" path="res://Task/white-rect.png" id="2_2k235"]
 [ext_resource type="PackedScene" uid="uid://d0hi00w12830g" path="res://Additional Scenes/taskStat.tscn" id="3_56olt"]
 [ext_resource type="Texture2D" uid="uid://d2qep1xxaw7ef" path="res://Task/white-square-1.png" id="3_rpln2"]
@@ -14,10 +15,15 @@ shader = ExtResource("1_4ggxa")
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_dk676"]
 shader = ExtResource("1_4ggxa")
 
+[sub_resource type="LabelSettings" id="LabelSettings_gi054"]
+font_size = 15
+font_color = Color(0.897414, 0.923565, 0.91976, 1)
+
 [node name="DisplayTask" type="Control"]
 layout_mode = 3
 anchor_right = 0.5
 anchor_bottom = 0.5
+script = ExtResource("1_gi054")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 material = SubResource("ShaderMaterial_pqvxl")
@@ -75,7 +81,25 @@ grow_vertical = 2
 [node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/TextureRect/VSplitContainer"]
 layout_mode = 2
 size_flags_vertical = 3
+alignment = 1
+
+[node name="Label" type="Label" parent="HBoxContainer/TextureRect/VSplitContainer/HBoxContainer"]
+layout_mode = 2
+text = "Team notification:"
+
+[node name="Label2" type="Label" parent="HBoxContainer/TextureRect/VSplitContainer/HBoxContainer"]
+layout_mode = 2
+text = "
+Remember to do your tasks! these are important 
+as we care about you health."
+label_settings = SubResource("LabelSettings_gi054")
+horizontal_alignment = 1
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="HBoxContainer/TextureRect/VSplitContainer"]
 layout_mode = 2
 size_flags_vertical = 3
+alignment = 1
+
+[node name="Label" type="Label" parent="HBoxContainer/TextureRect/VSplitContainer/HBoxContainer2"]
+layout_mode = 2
+text = "Lorem Ipsum Dorem"

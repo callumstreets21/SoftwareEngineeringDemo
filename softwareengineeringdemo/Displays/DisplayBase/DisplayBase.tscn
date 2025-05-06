@@ -1,8 +1,9 @@
-[gd_scene load_steps=11 format=3 uid="uid://m8gewbw7h77d"]
+[gd_scene load_steps=12 format=3 uid="uid://m8gewbw7h77d"]
 
 [ext_resource type="Theme" uid="uid://bymf7smqhnjk6" path="res://Ui_Theme.tres" id="1_mmr0i"]
 [ext_resource type="PackedScene" uid="uid://dt4fuurxd4y3e" path="res://Displays/DisplayTask/DisplayTask.tscn" id="2_58dhh"]
 [ext_resource type="Shader" uid="uid://dyr6u3sn5ymgf" path="res://Displays/DisplayTask/DisplayTask.gdshader" id="2_gil83"]
+[ext_resource type="Script" uid="uid://bpn0odkjmwv1v" path="res://Displays/DisplayBase/tab_container.gd" id="3_660ng"]
 [ext_resource type="PackedScene" uid="uid://cfkiuiupw6pus" path="res://Displays/DisplayDashboard/DisplayDashboard.tscn" id="3_815r1"]
 [ext_resource type="PackedScene" uid="uid://w02mv2oawevh" path="res://Displays/DisplayStats/DisplayStats.tscn" id="4_660ng"]
 [ext_resource type="PackedScene" uid="uid://diqiaahs2s3ay" path="res://Displays/DisplaySettings/DisplaySettings.tscn" id="6_n216t"]
@@ -39,6 +40,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 tab_alignment = 2
 current_tab = 0
+script = ExtResource("3_660ng")
 
 [node name="Dashboard" parent="CanvasLayer/Panel/TabContainer" instance=ExtResource("3_815r1")]
 layout_mode = 2
@@ -79,3 +81,5 @@ text = "Fatigue monitoring app"
 label_settings = SubResource("LabelSettings_mmr0i")
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[connection signal="tab_changed" from="CanvasLayer/Panel/TabContainer" to="CanvasLayer/Panel/TabContainer" method="_on_tab_changed"]

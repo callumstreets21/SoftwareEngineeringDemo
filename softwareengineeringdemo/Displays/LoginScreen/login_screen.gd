@@ -13,11 +13,11 @@ func _on_button_pressed() -> void:
 
 func _input(event: InputEvent) -> void:
 	if event.is_action("InjectFakeData"):
-		Database.add_entry(1, 2, 4, 5)
-		Database.add_entry(1, 2, 4, 5)
-		Database.add_entry(1, 2, 4, 5)
-		Database.add_entry(1, 2, 4, 5)
-		Database.add_entry(1, 2, 4, 5)
+		Database.add_entry(1, 0.19, 8, 5)
+		Database.add_entry(1, 0.5, 6, 5)
+		Database.add_entry(1, 0.7, 4, 5)
+		Database.add_entry(1, 1.2, 2, 5)
+		Database.add_entry(1, 6, 1, 5)
 		
 				# Get last 5 entries
 		var recent = Database.get_latest_entries(5)

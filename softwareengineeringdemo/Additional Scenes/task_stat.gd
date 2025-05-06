@@ -5,9 +5,18 @@ extends Control
 @onready var FAScore = $VBoxContainer/HBoxContainer2/FandAScore
 @onready var DeScore = $VBoxContainer/HBoxContainer2/DecisionScore
 
+var rs
+var ms
+var fas
+var ds
+
 func set_score(RS : float, MS : float, FAS : float, DS : float):
-	RScore.text = RS
-	MemScore.text = MS
-	FAScore.text = FAS
-	DeScore.text = DS
-	
+	RScore.text = "%.02f" % RS
+	MemScore.text = "%d" % MS
+	FAScore.text = "%d" % FAS
+	DeScore.text = "%d" % DS
+	print("RS: %f" %RS)
+	rs = RS
+	ms = MS
+	fas = FAS
+	ds = DS
