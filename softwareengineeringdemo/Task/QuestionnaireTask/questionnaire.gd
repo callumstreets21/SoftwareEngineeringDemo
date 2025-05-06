@@ -1,4 +1,4 @@
-extends Node2D
+extends Control
 
 var QuestionDictionary = [
 	{
@@ -56,6 +56,7 @@ var QuestionDictionary = [
 var CurrentQuestionIndex = 0 ##index of the current questions
 var CurrentQuestion = {} ##container for the current question
 var TurnsTaken = 0
+var gameended
 
 ##assigns labels and buttons to variables
 @onready var QuestionLabel = $"QuestionLabel"
@@ -89,7 +90,8 @@ func CheckAnswer(SelectedAnswer: String):
 		TurnsTaken += 1
 	
 	if CurrentQuestionIndex == 10:
-		print("Game end")	
+		print("Game end")
+		gameended = true
 	
 
 func OnButton1Pressed() -> void:

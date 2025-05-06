@@ -1,11 +1,11 @@
-extends Node2D
+extends Control
 
 var HowManyFlipped = 0
 var TurnsTaken = 0
 var SelectedCard = ""
 var FlippedButtons = []
 var PairsLeft = 18
-
+var gameended = false
 ##originals
 ##aces
 @onready var AceOfClubs = $"Buttons/AceOfClubsButton"
@@ -89,6 +89,7 @@ func DisableButton():
 	PairsLeft -= 1 ##remove from pairsleft so you know when game is done
 	if PairsLeft == 0:
 		print("GameOver") ##gameover if none left
+		gameended = true
 
 
 func AceOfClubsPressed() -> void:

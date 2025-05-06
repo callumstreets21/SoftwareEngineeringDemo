@@ -10,6 +10,8 @@ extends Control
 func _ready() -> void:
 	refresh()
 			
+func _process(delta: float) -> void:
+	refresh()
 
 func refresh():
 	Database.load_database()

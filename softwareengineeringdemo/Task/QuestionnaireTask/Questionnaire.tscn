@@ -2,19 +2,20 @@
 
 [ext_resource type="Script" uid="uid://cxdbmpor2aro4" path="res://Task/QuestionnaireTask/questionnaire.gd" id="1_tm2c8"]
 
-[node name="Questionnaire" type="Node2D"]
+[node name="Questionnaire" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("1_tm2c8")
 
 [node name="HSplitContainer" type="HSplitContainer" parent="."]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 594.0
-offset_top = 460.0
-offset_right = 1309.0
-offset_bottom = 774.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
@@ -52,19 +53,15 @@ size_flags_vertical = 3
 text = "Button 4"
 
 [node name="QuestionLabel" type="Label" parent="."]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 774.0
-offset_top = 336.0
-offset_right = 1131.0
-offset_bottom = 445.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "Question"
 horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="pressed" from="HSplitContainer/VSplitContainer/Button1" to="." method="OnButton1Pressed"]
 [connection signal="pressed" from="HSplitContainer/VSplitContainer/Button2" to="." method="OnButton2Pressed"]

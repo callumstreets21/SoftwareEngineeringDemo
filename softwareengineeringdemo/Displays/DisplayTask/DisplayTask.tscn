@@ -1,11 +1,13 @@
-[gd_scene load_steps=9 format=3 uid="uid://dt4fuurxd4y3e"]
+[gd_scene load_steps=11 format=3 uid="uid://dt4fuurxd4y3e"]
 
 [ext_resource type="Texture2D" uid="uid://dmvke8k5ce6yc" path="res://Task/white-rect.png" id="1_0mwyl"]
 [ext_resource type="Script" uid="uid://cu3ak2snfn7s2" path="res://Displays/DisplayTask/display_task.gd" id="1_gl2i0"]
 [ext_resource type="Shader" uid="uid://dyr6u3sn5ymgf" path="res://Displays/DisplayTask/DisplayTask.gdshader" id="1_pqvxl"]
 [ext_resource type="Texture2D" uid="uid://d2qep1xxaw7ef" path="res://Task/white-square-1.png" id="3_wuvtp"]
+[ext_resource type="PackedScene" uid="uid://biommkle86s83" path="res://Task/MemoryMatchTask/MemoryMatch.tscn" id="5_21h8m"]
 [ext_resource type="PackedScene" uid="uid://d35qvyfik1irs" path="res://Task/FocusAndAttentionTask/Focus_Scene.tscn" id="5_gl2i0"]
 [ext_resource type="PackedScene" uid="uid://bftxrjrj0b8kn" path="res://Task/ReactionTimeTask/Reaction_Scene.tscn" id="6_ux1g5"]
+[ext_resource type="PackedScene" uid="uid://cg73pbpaxk2ty" path="res://Task/QuestionnaireTask/Questionnaire.tscn" id="8_s1pv1"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_pqvxl"]
 shader = ExtResource("1_pqvxl")
@@ -57,5 +59,21 @@ layout_mode = 1
 
 [node name="ReactionTime" parent="HBoxContainer/TextureRect" instance=ExtResource("6_ux1g5")]
 layout_mode = 1
+
+[node name="Memory" parent="HBoxContainer/TextureRect" instance=ExtResource("5_21h8m")]
+
+[node name="Questionnaire" parent="HBoxContainer/TextureRect" instance=ExtResource("8_s1pv1")]
+layout_mode = 1
+
+[node name="Label" type="Label" parent="HBoxContainer/TextureRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "TASKS COMPLETE! WELL DONE!"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="pressed" from="HBoxContainer/TextureRect3/VBoxContainer/Button" to="." method="_on_button_pressed"]
