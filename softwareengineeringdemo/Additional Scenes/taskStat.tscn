@@ -1,4 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://d0hi00w12830g"]
+[gd_scene load_steps=3 format=3 uid="uid://d0hi00w12830g"]
+
+[ext_resource type="Script" uid="uid://bu6h70gv7jkv4" path="res://Additional Scenes/task_stat.gd" id="1_7y4mn"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_vj8sw"]
 font_size = 12
@@ -12,6 +14,7 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 6
 size_flags_vertical = 6
+script = ExtResource("1_7y4mn")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
@@ -88,7 +91,7 @@ label_settings = SubResource("LabelSettings_vj8sw")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Label4" type="Label" parent="VBoxContainer/HBoxContainer2"]
+[node name="Label2" type="Label" parent="VBoxContainer/HBoxContainer2"]
 layout_mode = 2
 size_flags_horizontal = 5
 size_flags_vertical = 5
@@ -97,7 +100,7 @@ label_settings = SubResource("LabelSettings_vj8sw")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="MemoryScore3" type="Label" parent="VBoxContainer/HBoxContainer2"]
+[node name="DecisionScore" type="Label" parent="VBoxContainer/HBoxContainer2"]
 layout_mode = 2
 size_flags_horizontal = 5
 size_flags_vertical = 5

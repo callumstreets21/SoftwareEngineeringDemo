@@ -4,14 +4,16 @@ extends Node
 @onready var orb = $OrbButton
 @onready var label = $PanelContainer/ReactionTimeLabel
 
+var gameended : bool = false
+
 var start_time : float = 0.0
 var current_round : int = 0
 var rounds : int = 10
 var total_reaction_time : float = 0
+var score
 
 func _ready():
 	orb.hide()
-	start_game()
 
 func start_game():
 	if current_round != rounds:
@@ -25,7 +27,9 @@ func start_game():
 		end_game()
 
 func end_game():
-	label.text = str(total_reaction_time / rounds)
+	score = total_reaction_time / rounds
+	label.text = str(score)
+	gameended = true
 	
 
 func show_orb():

@@ -33,9 +33,9 @@ var normal_colors = {
 	"Yellow": Color(1.8, 0.8, 1.0)
 }
 
+var gameended : bool = false
 
 func _ready():
-	start_game()
 	for color in colors:
 		buttons[color].pressed.connect(func(): _on_button_pressed(color))
 	#adjust_button_positions()
@@ -75,6 +75,7 @@ func start_game():
 	print(str(panel.size.x))
 	
 func end_game():
+	gameended = true
 	print(str(tries_left/total_tries))
 
 func preset_button_colors():
@@ -124,7 +125,7 @@ func _on_button_pressed(color) -> void:
 		player_index += 1
 		if player_index >= sequence.size():
 			round_count += 1 #on success
-
+			
 			if round_count >= max_rounds:
 				label.text = "You won all 10 rounds!"
 				await get_tree().create_timer(2).timeout
@@ -132,6 +133,7 @@ func _on_button_pressed(color) -> void:
 				return
 
 			label.text = "Correct! Round %d of %d" % [round_count, max_rounds]
+			
 			await get_tree().create_timer(1).timeout
 			add_color_to_sequence()
 	else:
