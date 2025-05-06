@@ -58,37 +58,37 @@ var PairsLeft = 18
 
 
 func FlipCard(ButtonName: TextureButton, CardName: String):
-	ButtonName.visible = false
-	FlippedButtons.append(ButtonName)
+	ButtonName.visible = false ##shows card underneath
+	FlippedButtons.append(ButtonName) ##adds that button to the array
 	
-	if HowManyFlipped == 0:
+	if HowManyFlipped == 0: ##if no other cards flipped do :
 		SelectedCard = CardName
 		HowManyFlipped += 1	
-	elif HowManyFlipped == 1:
+	elif HowManyFlipped == 1: ##if another card is flipped check if it matches
 		if SelectedCard == CardName:
-			TurnsTaken += 1
-			HowManyFlipped = 0
-			DisableButton()
+			TurnsTaken += 1 ##increment turns
+			HowManyFlipped = 0 ##reset value
+			DisableButton() ##call disable button if it matches
 			
 		else:
 			TurnsTaken += 1
 			HowManyFlipped = 0
-			UnflipCard()
+			UnflipCard() ##if it doesnt match unflip card
 		
 
 func UnflipCard():
-	await get_tree().create_timer(0.1).timeout
+	await get_tree().create_timer(0.1).timeout ##slight timer to see the second card picked
 	for x in FlippedButtons:
-		x.visible = true	
-	FlippedButtons.clear()		
+		x.visible = true ##make all picked cards buttons visible again, covering the texture
+	FlippedButtons.clear() ##clear the array so no issues
 
 func DisableButton():
 	for x in FlippedButtons:
-		x.disabled = true
-	FlippedButtons.clear()
-	PairsLeft -= 1
+		x.disabled = true ##disable to button so they cant be clicked
+	FlippedButtons.clear() ##clear the array
+	PairsLeft -= 1 ##remove from pairsleft so you know when game is done
 	if PairsLeft == 0:
-		print("GameOver")
+		print("GameOver") ##gameover if none left
 
 
 func AceOfClubsPressed() -> void:
