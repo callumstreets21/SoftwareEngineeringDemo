@@ -43,3 +43,45 @@ static func FeedbackFocus(score : int) -> String:
 	else:
 		feedback = "Your focus seems poor today, you may be quite fatigued and need rest"
 		return feedback
+
+static func FeedbackMemory(score : int) -> String:
+	var feedback = ""
+	if score == 0:
+		feedback = "INVALID SCORE"
+		return feedback
+	if score >= 18 && score < 36:
+		feedback = "Sharp memory today! you seem incredibly alert and awake!"
+		return feedback
+	if score >= 36 && score < 50:
+		feedback = "Great memory! you seem alert and awake!"
+		return feedback
+	if score >= 50 && score < 70:
+		feedback = "Good memory! you seem decently alert today!"
+		return feedback
+	if score >=70 && score < 100:
+		feedback = "Your memory seem a little off today, maybe you need some more rest"
+		return feedback
+	else:
+		feedback = "Your memory seems poor today, you may be quite fatigued and need rest"
+		return feedback
+
+static func FeedbackDecision(score : int) -> String:
+	var feedback = ""
+	if score < 10:
+		feedback = "INVALID SCORE"
+		return feedback
+	if score >= 10 && score < 12:
+		feedback = "Sharp decision making today! you seem incredibly alert and awake!"
+		return feedback
+	if score >= 12 && score < 16:
+		feedback = "Great decision making! you seem alert and awake!"
+		return feedback
+	if score >= 16 && score < 20:
+		feedback = "Good decision making! you seem decently alert today!"
+		return feedback
+	if score >=20 && score < 24:
+		feedback = "Your decision making seem a little off today, maybe you need some more rest"
+		return feedback
+	else:
+		feedback = "Your decision making seems poor today, you may be quite fatigued and need rest"
+		return feedback

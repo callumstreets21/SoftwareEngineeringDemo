@@ -15,7 +15,6 @@ func set_score(RS : float, MS : float, FAS : float, DS : float):
 	MemScore.text = "%d" % MS
 	FAScore.text = "%d" % FAS
 	DeScore.text = "%d" % DS
-	print("RS: %f" %RS)
 	rs = RS
 	ms = MS
 	fas = FAS

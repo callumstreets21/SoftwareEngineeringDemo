@@ -1,6 +1,16 @@
-[gd_scene load_steps=2 format=3 uid="uid://cg73pbpaxk2ty"]
+[gd_scene load_steps=5 format=3 uid="uid://cg73pbpaxk2ty"]
 
 [ext_resource type="Script" uid="uid://cxdbmpor2aro4" path="res://Task/QuestionnaireTask/questionnaire.gd" id="1_tm2c8"]
+[ext_resource type="Shader" uid="uid://dyr6u3sn5ymgf" path="res://Displays/DisplayTask/DisplayTask.gdshader" id="2_3oh56"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_vtx1r"]
+shader = ExtResource("2_3oh56")
+
+[sub_resource type="LabelSettings" id="LabelSettings_eo1i6"]
+font_size = 18
+font_color = Color(0.857766, 0.583373, 0.579778, 1)
+shadow_size = 2
+shadow_color = Color(0, 0, 0, 1)
 
 [node name="Questionnaire" type="Control"]
 layout_mode = 3
@@ -10,6 +20,15 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_tm2c8")
+
+[node name="Panel" type="Panel" parent="."]
+material = SubResource("ShaderMaterial_vtx1r")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="HSplitContainer" type="HSplitContainer" parent="."]
 layout_mode = 1
@@ -60,6 +79,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "Question"
+label_settings = SubResource("LabelSettings_eo1i6")
 horizontal_alignment = 1
 vertical_alignment = 1
 

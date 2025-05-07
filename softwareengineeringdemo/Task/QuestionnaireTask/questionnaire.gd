@@ -71,6 +71,8 @@ func _ready() -> void:
 
 
 func LoadQuestion():
+	if CurrentQuestionIndex == 10:
+		return
 	CurrentQuestion = QuestionDictionary[CurrentQuestionIndex] ##the current question is the index of the dictionary
 	QuestionLabel.text = CurrentQuestion["Question"] ##assign question to label
 	
@@ -92,6 +94,7 @@ func CheckAnswer(SelectedAnswer: String):
 	if CurrentQuestionIndex == 10:
 		print("Game end")
 		gameended = true
+
 	
 
 func OnButton1Pressed() -> void:

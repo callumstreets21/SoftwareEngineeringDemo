@@ -36,26 +36,25 @@ func _process(delta: float) -> void:
 			listPos = 0
 		elif listPos < 0:
 			listPos = 4
-		print("rs: %f" %statsAll[listPos].rs)
 		reac.text = feedbackgen.FeedbackReaction(statsAll[listPos].rs)
 		fanda.text = feedbackgen.FeedbackFocus(statsAll[listPos].fas)
+		mem.text = feedbackgen.FeedbackMemory(statsAll[listPos].ms)
+		dec.text = feedbackgen.FeedbackDecision(statsAll[listPos].ds)
 		refresh()
 
 func _ready() -> void:
 	refresh()
 	reac.text = feedbackgen.FeedbackReaction(statsAll[listPos].rs)
 	fanda.text = feedbackgen.FeedbackFocus(statsAll[listPos].fas)
-			
+	mem.text = feedbackgen.FeedbackMemory(statsAll[listPos].ms)
+	dec.text = feedbackgen.FeedbackDecision(statsAll[listPos].ds)
 
 func refresh():
 	Database.load_database()
 	var entries = Database.get_latest_entries(5)
-	for entry in entries:
-		print(entry)
 	if entries.size() > 0:
 		var counter = 0
 		for entry in entries:
-			print("loaded rs: %f" %entry["Reaction"])
 			statsAll[counter].set_score(entry["Reaction"], entry["Memory"], entry["FandA"], entry["Decision"])
 			counter += 1
 	else:

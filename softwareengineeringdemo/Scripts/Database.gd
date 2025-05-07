@@ -25,7 +25,6 @@ func load_database() -> void:
 		var json = JSON.parse_string(content)
 		if typeof(json) == TYPE_ARRAY:
 			entries = json
-			print("loaded array, values in array: %d" % entries.size())
 		else:
 			push_error("JSON is not an array: %s" % file_path)
 
